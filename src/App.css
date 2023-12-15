@@ -1,0 +1,57 @@
+#root{
+  max-width: 80%;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+form{
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+}
+
+textarea{
+  width: 100%;
+}
+
+button{
+  border: none;
+  border-radius: 5px;
+  color: white;
+ padding: 0.3rem;
+  cursor: pointer;
+  background-color: rgb(206, 35, 35);
+  transition: all .3s ease;
+}
+
+button:hover{
+  background-color: rgb(158, 19, 19);
+}
+
+[type="submit"]{
+  padding: 1rem;
+  background-color: rgb(35, 112, 214);
+}
+
+[type="submit"]:hover{
+  background-color: rgb(12, 75, 156);
+}
+
+.task-card{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.task-card>p{
+  flex-grow: 4;
+}
+
+
+.is-checked{
+  text-decoration:line-through;
+}

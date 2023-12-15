@@ -1,0 +1,20 @@
+<?php
+	# Clase para establecer una conexion con la base de datos
+	class DbConnect {
+		private $server = 'localhost';
+		private $dbname = 'todo';
+		private $user = 'root';
+		private $pass = '';
+
+		public function connect() {
+			try {
+				$conn = new PDO('mysql:host=' .$this->server .';dbname=' . $this->dbname, $this->user, $this->pass);
+				$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+				return $conn;
+			} catch (\Exception $e) {
+				echo "Database Error: " . $e->getMessage();
+			}
+		}
+        
+	}
+?>
